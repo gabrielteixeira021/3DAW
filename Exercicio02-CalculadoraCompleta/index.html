@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <table style="width: 50%; margin-bottom: 2em;">
+
+    <form action="calculadora.php" method="get" name="calculadora">
+        <input type="text" name="a" placeholder="valor 1" id="a"><br>
+        <input type="text" name="b" placeholder="valor 2" id="b"><br>        
+        <select name="op" id="operacoes">
+            <option value="1" class="opt">Soma</option>
+            <option value="2" class="opt">Subtração</option>
+            <option value="3" class="opt">Multiplicação</option>
+            <option value="4" class="opt">Divisão</option>
+            <option value="5" class="opt">Raiz Quadrada</option>
+            <option value="6" class="opt">Trocar Sinal</option>
+            <option value="7" class="opt">Seno</option>
+            <option value="8" class="opt">Cosseno</option>
+            <option value="9" class="opt">Tangente</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>    
+
+    <script>
+    
+        $(function(){
+            $('#operacoes').change(function(){
+                var selectedV = $(this).val();
+                if(selectedV >= 5){
+                    $('#b').hide();
+                }else{
+                    $('#b').show();
+                }
+            });
+            $('#operacoes').trigger('change');
+        });
+
+        
+    </script>
+</body>
+</html>
