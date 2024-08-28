@@ -1,0 +1,3 @@
+nome;sigla;carga
+Sistemas Operacionais;SOP;80
+Língua Estrangeira;LES;80
