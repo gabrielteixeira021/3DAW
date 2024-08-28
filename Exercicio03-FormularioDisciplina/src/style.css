@@ -1,0 +1,66 @@
+/*reset document*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center; /*centraliza horizontalmente*/
+    background-color: antiquewhite;
+    padding: 1em;
+}
+
+
+
+.container input[type=text]{
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    padding: 8px 14px;
+}
+
+.container input[type=text]:focus{
+    border: 3px solid #555;
+}
+
+#Form{
+    width: 50%; 
+    margin: 1.2em;
+    
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container input{
+    width: 100%; 
+    display: inline-block; 
+    flex: 1;
+}
+
+label{
+    min-width: 100px;
+    margin-right: 20px;
+}
+
+#Enviar{
+    margin-top: 12px;
+    padding: 5px;
+    border: 3px solid blue;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+}
+
+#Enviar:hover{
+    background-color: darkblue;
+}
