@@ -1,7 +1,8 @@
-nome;sigla;carga
 Sistemas Operacionais;SOP;80
 Língua Estrangeira;LES;80
 Topicos Humanos;2TPH;80
 Desenvolvimento Web;DAW;200
-Desenvolvimento Web;DAW;200
 Fundamentos de algoritmos;FAC;80
+Contrução de Aplicações Web;CAW;180
+
+Contrução de Aplicações Web;CAW;180
