@@ -1,0 +1,4 @@
+;;
+;;
+Fundamentos de algoritmos;FAC;80
+Organização de Computadores;1ORG;80

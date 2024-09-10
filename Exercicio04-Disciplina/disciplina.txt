@@ -2,3 +2,4 @@
 Opções binárias;OB;70
 ;;
 ;;
+;;
