@@ -24,9 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Disciplina</title>
     <link rel="stylesheet" href="./src/style.css">   
+    <link rel="stylesheet" href="./src/criarDisc.css">
 </head>
 <body>
-
 
     <header>
         <img src="" alt="">
@@ -44,11 +44,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </div>
 
         <div class="form">
-
+        
             <form action="criarDisciplina.php" method="post">
                 
-                <div class="form-container">
-    
+                <div class="form-container">    
                     <label for="disc">Nome</label>
                     <input type="text" name="disc" placeholder="Insira o nome da disciplina">
                 </div>

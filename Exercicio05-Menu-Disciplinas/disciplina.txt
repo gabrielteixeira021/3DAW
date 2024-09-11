@@ -1,4 +1,2 @@
-;;
-;;
-Fundamentos de algoritmos;FAC;80
-Organização de Computadores;1ORG;80
+Teste;TWT;80
+Organização de computadores;1ORG;80

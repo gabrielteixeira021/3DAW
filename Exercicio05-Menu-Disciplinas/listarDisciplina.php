@@ -22,21 +22,33 @@
         <h1>Listar disciplinas</h1>
         <table>
 
-            <tr><th>nome</th><th>sigla</th><th>carga</th></tr>
+            <tr><th>Nome</th><th>Sigla</th><th>Carga</th></tr>
+
             <?php
-            $arqDisc = fopen("disciplina.txt","r") or die("erro ao abrir arquivo");
-            
-            while(!feof($arqDisc)) {
-                    $linha = fgets($arqDisc);
-                    $colunaDados = explode(";", $linha);
-            
-            // <tr><td><?php echo $colunaDados[0] </td>
-                    echo "<tr><td>" . $colunaDados[0] . "</td>" .
-                        "<td>" . $colunaDados[1] . "</td>" .
-                        "<td>" . $colunaDados[2] . "</td></tr>";
+            // abrindo o documento apenas para leitura
+            $myfile = fopen("disciplina.txt", 'r') or die("Não foi possível abrir o arquivo");
+
+            // percorrendo todo o documento
+            while(!feof($myfile)){
+
+                $linha = fgets($myfile); // obtendo a linha atual do documento
+                
+                // verifica se a linha não está vazia
+                if(!empty(trim($linha))){
+                    $colunaDados = explode(";", $linha); // "explodir para conseguir as três colunas de informação do dado"
+
+                    // verifica se há pelo menos 3 elementos no array
+                    if(count($colunaDados) >= 3){
+
+                        // criando as linhas e colunas, e printando os dados dentro
+                        echo "<tr><td>" . $colunaDados[0] . "</td>" .
+                        "<td>" . $colunaDados[1] . "</td>" . 
+                        "<td>" . $colunaDados[2] . "</td><tr>";
+                    }
                 }
-            
-            fclose($arqDisc);                
+                
+            }
+            fclose($myfile);
             ?>
             
         </table>

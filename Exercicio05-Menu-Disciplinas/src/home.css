@@ -1,0 +1,30 @@
+.container{
+    height: 700px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list-container{
+    width: 50%;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li{
+    background-color: rgb(231, 172, 172);
+    padding: 10px;
+    margin-bottom: 3em;
+}
+
+ul a{    
+    text-decoration: none;
+    color: blue;
+}
+
+.title{
+    margin: 2em;
+}
