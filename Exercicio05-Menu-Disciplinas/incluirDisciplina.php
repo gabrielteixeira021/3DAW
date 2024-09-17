@@ -23,18 +23,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Disciplina</title>
-    <link rel="stylesheet" href="./src/style.css">   
-    <link rel="stylesheet" href="./src/criarDisc.css">
+    <link rel="stylesheet" href="./src/css/style.css">   
+    <link rel="stylesheet" href="./src/css/criarDisc.css">
 </head>
 <body>
 
     <header>
         <img src="" alt="">
-        <li>
-            <ul><a href="index.html">Home</a></ul>
-            <ul><a href="alterarDisciplina.php">Alterar Disciplina</a></ul>
-            <ul><a href="listarDisciplina.php">listar Disciplina</a></ul>
-        </li>
+        
+
+        </ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alterarDisciplina.html">Alterar Disciplina</a></li>
+            <li><a href="listarDisciplina.php">listar Disciplina</a></li>
+        </ul>
     </header>
     
     <div class="container">
@@ -42,10 +44,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <div class="title">
             <h1>Criar Disciplina</h1>
         </div>
-
+    
         <div class="form">
         
-            <form action="criarDisciplina.php" method="post">
+            <form action="incluirDisciplina.php" method="post">
                 
                 <div class="form-container">    
                     <label for="disc">Nome</label>

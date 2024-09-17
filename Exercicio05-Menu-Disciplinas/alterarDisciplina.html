@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Disciplina</title>    
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="" alt="">
+        <li>
+            <ul><a href="index.html">Home</a></ul>
+            <ul><a href="incluirDisciplina.php">Incluir Disciplina</a></ul>
+            <ul><a href="listarDisciplina.php">Listar Disciplina</a></ul>
+        </li>
+    </header>
+    
+    <div class="container">
+        
+        <div class="title">
+            <h1>Alterar Disciplina</h1>
+        </div>
+
+        <div class="form">
+
+            <form action="./src/php/alterarDisciplina.php" method="get">
+                
+                <div class="form-container">
+                    
+                    <label for="disc">Insira a sigla da disciplina a ser alterada</label>
+                    <input type="text" name="sigla">
+
+                </div>
+
+                <input type="submit" id="Enviar" value="Enviar">
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
