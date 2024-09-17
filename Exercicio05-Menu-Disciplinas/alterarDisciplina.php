@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET')  {
             }
         }
         fclose($myFile);
-        $msg = $found ? "Disciplina encontrada" : "Disciplina não encontrada";
+        $msg = $found ? "Disciplina encontrada" : "Disciplina não encontrada"; 
     }
 }
 
