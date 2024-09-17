@@ -1,3 +1,3 @@
 Teste;TWT;80
-Organização de computadores;1ORG;80
+Organização e Arquitetura de computadores;1ORG;160
 Fundamentos de algoritmos;1FAC;80

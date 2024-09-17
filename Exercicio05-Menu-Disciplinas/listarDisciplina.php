@@ -27,7 +27,7 @@
             <?php
             // abrindo o documento apenas para leitura
             $myfile = fopen("disciplina.txt", 'r') or die("Não foi possível abrir o arquivo");
-
+            
             // percorrendo todo o documento
             while(!feof($myfile)){
 
