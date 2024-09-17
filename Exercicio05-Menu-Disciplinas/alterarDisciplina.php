@@ -44,18 +44,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $myFile = fopen($fileName, "r") or die("Não foi possível abrir o arquivo.");
         $temp = fopen($tempFile, "w") or die("Não foi possível criar o arquivo temporário.");
-
+        
         while (!feof($myFile)) {
             $linha = fgets($myFile);
             $colunaDados = explode(";", $linha);
 
+            // verificando se a linha atual é a que deve ser alterada
             if (trim($colunaDados[1]) == $sigla) {
-                $newLinha = "$nome;$sigla;$carga\n";
-                fwrite($temp, $newLinha);
+                $newLinha = "$nome;$sigla;$carga\n"; // criando uma nova linha
+                fwrite($temp, $newLinha); // escrevendo essa linha
             } else {
-                fwrite($temp, $linha);
+                fwrite($temp, $linha); 
             }
         }
+        // fechando os arquivos
         fclose($myFile);
         fclose($temp);
         
