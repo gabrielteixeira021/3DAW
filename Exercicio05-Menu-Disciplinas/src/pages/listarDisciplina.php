@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Disciplinas</title>
-    <link rel="stylesheet" href="./src/css/style.css">   
+    <link rel="stylesheet" href="../css/style.css"> 
 </head>
 <body>
 
     <header>
         <img src="" alt="">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../../index.html">Home</a></li>
             <li><a href="incluirDisciplina.php">Incluir Disciplina</a></li>
-            <li><a href="alterarDisciplina.html">Alterar Disciplina</a></li>
+            <li><a href="buscarDisciplina.html">Alterar Disciplina</a></li>
+            <li><a href="excluirDisciplina.html">Excluir Disciplina</a></li>
         </ul>
     </header>
 

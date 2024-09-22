@@ -14,6 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     fwrite($file, $linha);
     fclose($file);
+    echo "Disciplina adicionada";
 }
 ?>
 
@@ -23,26 +24,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Disciplina</title>
-    <link rel="stylesheet" href="./src/css/style.css">   
-    <link rel="stylesheet" href="./src/css/criarDisc.css">
+    <link rel="stylesheet" href="../css/style.css">      
 </head>
 <body>
 
-    <header>
-        <img src="" alt="">
-        
-
+    <header>            
         </ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="alterarDisciplina.html">Alterar Disciplina</a></li>
-            <li><a href="listarDisciplina.php">listar Disciplina</a></li>
+            <li><a href="../../index.html">Home</a></li>
+            <a href="buscarDisciplina.html"><li>Alterar Disciplina</li></a>
+            <li><a href="listarDisciplina.php">listar Disciplinas</a></li>
+            <li><a href="excluirDisciplina.html">Excluir Disciplina</a></li>
         </ul>
     </header>
     
     <div class="container">
         
         <div class="title">
-            <h1>Criar Disciplina</h1>
+            <h1>Incluir Disciplina</h1>
         </div>
     
         <div class="form">
