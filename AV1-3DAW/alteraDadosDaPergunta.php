@@ -2,6 +2,8 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
+    print_r($_POST);
+
     $ID = $_POST['ID'];
     $pergunta = $_POST['pergunta'];
     $altA = $_POST['alternativaA'];
@@ -11,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $altCorretaID = $_POST['alternativaCorreta'];
     
     $fileName = "perguntas_e_respostas.txt";
-    $tempFile = 'perguntas_e_respostas_temp.txt';
+    $tempFile = "perguntas_e_respostas_temp.txt";
     
     if (!file_exists($fileName)) {
         echo "Arquivo não encontrado.";
@@ -21,12 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         while (!feof($file)) {
             $linha = fgets($file);
-
-            /*
-            if(trim($linha) == ""){
-                continue;
-            }
-            */
+            
+            if(trim($linha) == "") continue;           
             
             $colunaDados = explode(";", $linha);
             
@@ -34,7 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if(count($colunaDados)>=7){
                 // verificando se a linha atual é a que deve ser alterada
                 if(trim($colunaDados[0]) == $ID){
-                    fwrite($temp, "$ID;$pergunta;$altA;$altB;$altC;$altD;$altCorreta\n"); // criando uma nova linha com as novas informações inseridas 
+                    $novaLinha = "$ID;$pergunta;$altA;$altB;$altC;$altD;$altCorretaID\n";
+                    fwrite($temp, $novaLinha); // criando uma nova linha com as novas informações inseridas
                 }else{
                     fwrite($temp, $linha); // reescreve a linha na ordem que tava antes
                 }
@@ -67,5 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li><a href="listarPerguntas.php">Listar Perguntas</a></li>
         <li><a href="index.html">Home</a></li>
     </ul>
+
+    
 </body>
 </html>
