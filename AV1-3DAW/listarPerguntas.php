@@ -7,13 +7,12 @@
 </head>
 <body>
 
-    <header>
-        
+    <header>        
         <ul>
-            <li><a href="index.html">Home</a></li>i
+            <li><a href="index.html">Home</a></li>
             <li><a href="cadastrarPergunta.php">Adicionar nova pergunta</a></li>
-            <li><a href="buscarPergunta.html">Alterar pergunta</a></li>
-            <li><a href="excluirPergunta.html">Excluir pergunta</a></li>
+            <li><a href="buscarPorID_alterar.html">Alterar pergunta</a></li>
+            <li><a href="buscarPorID_excluir.html">Excluir pergunta</a></li>
         </ul>
     </header>
 
@@ -49,8 +48,7 @@
                         "<td>" . $colunaDados[5] . "</td>"  .  // altD                        
                         "<td>" . $colunaDados[6] . "</td><tr>"; // altCorreta
                     }
-                }
-                
+                }                
             }
             fclose($file);
             ?>
