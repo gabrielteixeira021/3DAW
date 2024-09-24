@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }else{
                 fwrite($temp, $linha); // reescreve a linha na ordem que tava antes
             }
-        }            
+        }
     }
     // fechando os arquivos
     fclose($myFile);
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <p><?php echo htmlspecialchars($msg); ?></p>
     <ul>
-        <li><a href="listarDisciplina.php">Listar Disciplinas</a></li>
+        <li><a href="listarDisciplinas.php">Listar Disciplinas</a></li>
         <li><a href="../../index.html">Home</a></li>
     </ul>
 </body>

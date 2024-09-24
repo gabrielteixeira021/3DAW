@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </ul>
             <li><a href="../../index.html">Home</a></li>
             <a href="buscarDisciplina.html"><li>Alterar Disciplina</li></a>
-            <li><a href="listarDisciplina.php">listar Disciplinas</a></li>
+            <li><a href="listarDisciplinas.php">listar Disciplinas</a></li>
             <li><a href="excluirDisciplina.html">Excluir Disciplina</a></li>
         </ul>
     </header>

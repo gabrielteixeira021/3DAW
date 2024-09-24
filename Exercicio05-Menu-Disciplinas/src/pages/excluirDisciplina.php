@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 <body>
     <p><?php echo htmlspecialchars($msg); ?></p>
     <ul>
-        <li><a href="listarDisciplina.php">Listar Disciplinas</a></li>
+        <li><a href="listarDisciplinas.php">Listar Disciplinas</a></li>
         <li><a href="../../index.html">Home</a></li>
     </ul>
 </body>

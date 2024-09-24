@@ -1,2 +1,2 @@
 Organização e arquitetura de computadores ;1ORG;160
-Fundamentos de algoritmos Computacionais;1FAC;180
+Fundamentos de algoritmos Computacionais;1FAC;200
