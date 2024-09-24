@@ -38,7 +38,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
                 if(trim($colunalinha[1]) != $sigla){
                     fwrite($temp, $linha);
                 }
-            }            
+            }
 
         }
 
