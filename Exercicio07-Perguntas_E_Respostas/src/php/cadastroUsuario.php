@@ -1,23 +1,24 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
 
-
-if($_SERVER["REQUEST_METHOD"] == "GET"){
-
-$nome = $_GET["nome"];
-$email = $_GET["email"];
-$senha = $_GET["senha"];
-
-// escrevendo os dados enviados pelo formulário no arquivo
-if(!file_exists("dadosUsuarios.txt")){
-    $arq = fopen("dadosUsuarios.txt", "w") or die("Erro ao abrir o arquivo");
-    $linha = "nome;email;senha";
-    fwrite($arq, $linha);
-    fclose($arq);
+//  Escrevendo os dados do formulário em um arquivo de dados já existente
+if (!file_exists("dadosUser.txt")) {
+    $arqDisc = fopen("dadosUser.txt","w") or die("erro ao criar arquivo/escrever");
+    $linha = "nome;email;senha\n";
+    fwrite($arqDisc, $linha);
+    fclose($arqDisc);
 }
 
-$arq = fopen("dadosUsuarios.txt", "a") or die("Erro ao abrir o arquivo");
+$arqDisc = fopen("dadosUser.txt","a") or die("erro ao abrir arquivo");
 
-
+ $linha = $nome . ";" . $email . ";" . $senha . "\n";
+ echo($linha);
+ fwrite($arqDisc, $linha);
+ fclose($arqDisc);    echo "Usuario inserido com sucesso!";
 }
 
 ?>
