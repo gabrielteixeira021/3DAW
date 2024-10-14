@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuario</title>
+    <script src="../script/cadastroPergunta.js"></script>
+</head>
+<body>
+
+    <header>        
+        <ul>
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="listarPerguntas.html"></a></li>
+            <li><a href="buscarPergunta.html">Alterar pergunta</a></li>
+            <li><a href="excluirPergunta.html">Excluir pergunta</a></li>
+        </ul>
+    </header>
+
+    <form action="" method="post" id="formPergunta">
+
+        Pergunta:<input type="text" name="pergunta" id="pergunta"><br><br>
+        ID:<input type="text" name="ID" id="ID"><br><br>
+        A)<input type="text" name="a" id="a"><br><br>
+        B)<input type="text" name="b" id="b"><br><br>
+        C)<input type="text" name="c" id="c"><br><br>
+        D)<input type="text" name="d" id="d"><br><br>
+        Alternativa correta:<input type="text" name="correta" id="correta"><br><br>
+        <input type="button" value="Enviar" id="enviar" onclick="EnviarDadosPergunta();"><br>
+    </form>
+</body>
+</html>

@@ -1,4 +1,4 @@
 nome;email;senha
-;;
-;;
-;;
+Gabriel;charlesgabriel102@gmail.com;dwdghfaasd
+Lula;luisInacioLula@gmail.com;lulalulie
+Rayan;rayadyw@gmail.com;hgfisla

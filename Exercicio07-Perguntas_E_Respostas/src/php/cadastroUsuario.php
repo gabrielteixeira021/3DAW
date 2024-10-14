@@ -18,7 +18,7 @@ $arqDisc = fopen("dadosUser.txt","a") or die("erro ao abrir arquivo");
  $linha = $nome . ";" . $email . ";" . $senha . "\n";
  echo($linha);
  fwrite($arqDisc, $linha);
- fclose($arqDisc);    echo "Usuario inserido com sucesso!";
+ fclose($arqDisc);    echo "<br>Usuario inserido com sucesso!";
 }
 
 ?>
