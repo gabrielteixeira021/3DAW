@@ -36,5 +36,5 @@ function EnviarDadosPergunta() {
     xmlhttp.send(objJson);
     console.log("Informações enviadas");
     console.log("5");
-    alert("Usuario criado");
+    alert("Pergunta cadastrada com sucesso!");
 }
