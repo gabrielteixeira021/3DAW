@@ -1,2 +1,3 @@
 ID;Pergunta;A;B;C;D;Alternativa Correta
 1;Testando;t1A;t2B;t3C;t4D;B
+2;Quantas letras tem a palavra "ovo";2;3;4;5;2
