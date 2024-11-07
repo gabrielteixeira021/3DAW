@@ -6,13 +6,9 @@ var_dump($_POST);
 
 if (validaData($_POST['nome'], $_POST['email'], $_POST['matricula'])) {
 
-    echo json_encode(["status" => "Informações válidas"]);
+    echo "Informações válidas";
 
-    $conn = new mysqli("localhost", "root", "", "alunos");
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include "database.php";
 
     $action = $_POST['action'] ?? '';
 
@@ -23,10 +19,10 @@ if (validaData($_POST['nome'], $_POST['email'], $_POST['matricula'])) {
             $email = $_POST['email'];
             $matricula = $_POST['matricula'];
 
-            $stmt = $conn->prepare("INSERT INTO alunos (nome, email, matricula) VALUES(?, ?, ?)");
-            $stmt->bind_param("sss", $nome, $email, $matricula);
+            $stmt = $conn->prepare("INSERT INTO alunos (nome, matricula, email) VALUES(?, ?, ?)");
+            $stmt->bind_param("sis", $nome, $matricula, $email);
             $stmt->execute();
-            echo json_encode(["status" => "Aluno adicionado com sucesso"]);
+            echo "Aluno adicionado com sucesso";
             break;
 
         case 'read':
@@ -43,11 +39,11 @@ if (validaData($_POST['nome'], $_POST['email'], $_POST['matricula'])) {
             $email = $_POST['email'];
             $matricula = $_POST['matricula'];
 
-            $stmt = $conn->prepare("UPDATE alunos SET nome = ?, email = ?, matricula = ? WHERE id = ?");
-            $stmt->bind_param("sssi", $nome, $email, $matricula, $id);
+            $stmt = $conn->prepare("UPDATE alunos SET nome = ?, matricula = ?, email = ? WHERE id = ?");
+            $stmt->bind_param("ssii", $nome, $email, $matricula, $id);
             $stmt->execute();
 
-            echo json_encode(["status" => "Aluno atualizado com sucesso"]);
+            echo "Aluno Atualizado com sucesso";
             break;
 
         case 'delete':
@@ -56,7 +52,7 @@ if (validaData($_POST['nome'], $_POST['email'], $_POST['matricula'])) {
             $stmt = $conn->prepare("DELETE FROM alunos WHERE id = ?");
             $stmt->bind_param("i", $id);
             $stmt->execute();
-            echo json_encode(["status" => "Aluno excluído com sucessos"]);
+            echo json_encode(["status" => "Aluno excluído com sucesso"]);
             break;
 
         default:
@@ -67,5 +63,5 @@ if (validaData($_POST['nome'], $_POST['email'], $_POST['matricula'])) {
 
     $conn->close();
 } else {
-    echo json_encode(["status" => "Informações inválidas"]);
+    echo "<br>Informações inválidas";
 }

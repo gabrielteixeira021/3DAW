@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoader", function () {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         const formAluno = new formAluno(form);
-        formAluno.append("action", form.id.valueOf ? "update" : "create");
+        formAluno.append("action", form.id.value ? "update" : "create");
 
         fetch("aluno.php", {
             method: "POST",
