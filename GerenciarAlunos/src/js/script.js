@@ -30,8 +30,7 @@ function EnviarDadosCadastro() {
         }
     };
 
-    xmlhttp.open("POST", "../php/aluno.php", true);
+    xmlhttp.open("POST", "../php/aluno.php?action=create", true);
     xmlhttp.send(objForm);
     console.log("Informações Enviadas");
-
 }
