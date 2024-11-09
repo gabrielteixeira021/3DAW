@@ -42,8 +42,8 @@ switch($action){
 
         break;
         case 'read':
-            
-            // retorna a tabela        
+        
+        // retorna a tabela
         $resultado = $conn->query("SELECT * FROM alunos");
         $alunos = [];
 
@@ -61,8 +61,8 @@ switch($action){
         $name = $_POST['nome'];
         $email = urldecode($_POST['email']);
         
-        $sql = $conn->prepare("UPDATE alunos SET nome = ?, matricula = ?, email = ? WHERE matricula = ?");
-        $stmt->bind_param("sis", $nome, $matricula, $email);
+        $sql = $conn->prepare("UPDATE alunos SET nome = ?, email = ? WHERE matricula = ?");
+        $sql->bind_param("sis", $nome, $email);
 
         if($sql->execute()){
             echo json_encode(["status" => "success", "message" => "Aluno atualizado com sucesso"]);
@@ -76,7 +76,7 @@ switch($action){
         // deleta o aluno
         $matricula = $_POST['matricula'];
         $sql = $conn->prepare("DELETE FROM alunos WHERE matricula = ?");
-        $stmt->bind_param("i", $matricula);
+        $sql->bind_param("i", $matricula);
 
         if($sql->execute()){
             echo json_encode(["status" => "success", "message" => "Aluno deletado com sucesso"]);
@@ -92,15 +92,18 @@ switch($action){
         // retorna as informações de um aluno
         $matricula = $_GET['matricula'];
         $sql = $conn->prepare("SELECT * FROM alunos WHERE matricula = ?");
-        $stmt->bind_param("i", $matricula);
-        $stmt->execute();
-        $resultado = $stmt->get_result();
+        $sql->bind_param("i", $matricula);
+        $sql->execute();
+        $resultado = $sql->get_result();
 
         if($row = $resultado->fetch_assoc()){
             echo json_encode($row);
         }else{
             echo json_encode(["status" => "error", "message" => "Aluno não encontrado"]);
         }
+
+        $sql->close();
+
         break;
     default:
         

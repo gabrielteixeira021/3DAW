@@ -81,7 +81,7 @@ function deletarAluno(matricula) {
 
     const confirmar = confirm("Tem certeza que deseja excluir este aluno?");
 
-    if (!confirmar) return 0;
+    if (!confirmar) return;
 
     const xmlhttp = new XMLHttpRequest();
 
@@ -95,7 +95,7 @@ function deletarAluno(matricula) {
             console.error("Erro ao deletar aluno: " + this.status);
         }
     }
-    xmlhttp.send("matricula=" + encodeURIComponent(matricula));     // envia a matricula pro back
+    xmlhttp.send("matricula=" + encodeURIComponent(matricula));     // envia a matricula pro backs
 }
 
 
