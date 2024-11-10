@@ -58,11 +58,11 @@ switch($action){
         
         // guarda as informações atuais do aluno
         $matricula = $_POST['matricula'];
-        $name = $_POST['nome'];
+        $nome = $_POST['nome'];
         $email = urldecode($_POST['email']);
         
         $sql = $conn->prepare("UPDATE alunos SET nome = ?, email = ? WHERE matricula = ?");
-        $sql->bind_param("sis", $nome, $email);
+        $sql->bind_param("ssi", $nome, $email, $matricula);
 
         if($sql->execute()){
             echo json_encode(["status" => "success", "message" => "Aluno atualizado com sucesso"]);

@@ -20,11 +20,17 @@ function fetchAlunoData(matricula) {
             try {
 
                 const aluno = JSON.parse(this.responseText);
-                // atribuindo os dados do aluno ao valor de seu respectivo campo no formulario
-                document.getElementById("id").value = aluno.id;
-                document.getElementById("nome").value = aluno.nome;
-                document.getElementById("matricula").value = aluno.matricula;
-                document.getElementById("email").value = aluno.email;
+
+                if(aluno.status === "error"){
+                    document.getElementById("msg").textContent = aluno.message;
+                    return;
+                }else{
+
+                    document.getElementById("id").value = aluno.id;
+                    document.getElementById("nome").value = aluno.nome;
+                    document.getElementById("matricula").value = aluno.matricula;
+                    document.getElementById("email").value = aluno.email;
+                }
 
             } catch (e) {
 
